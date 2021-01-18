@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie App</title>
+        <link rel="stylesheet" href="src/style.css" />
+        <script src="src/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="header">
+                <ul class="headerList">
+                    <li id="item"> <a href="index.html">Home</a></li>
+                    <li id="item"> <a href="about-us.html" >About us</a></li>
+                    <li id="item"> <a href="contact-us.html">Contact us</a></li>
+                    <li id="popup-login">
+                        <button onclick="togglePopup()">Login/Register</button>
+                        <div class="popup" id="popup-1">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                                <form class="form" id="login">
+                                    <h1 class="form__title">Login/Register</h1>
+                                    <div class="form__message form__message--error"></div>
+                                    <div class="form__input-group">
+                                        <input type="text" class="form__input" autofocus placeholder="Username or email">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="password" class="form__input" autofocus placeholder="Password">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <button class="form__button" type="submit">Continue</button>
+                                    <p class="form__text">
+                                        <a href="#" class="form__link">Forgotten your password?</a>
+                                    </p>
+                                    <p class="form__text">
+                                        <a  class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account?</a>
+                                    </p>
+                                </form>
+                                <form class="form form--hidden" id="createAccount">
+                                    <h1 class="form__title">Create Account</h1>
+                                    <div class="form__message form__message--error"></div>
+                                    <div class="form__input-group">
+                                        <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="text" class="form__input" autofocus placeholder="Email Address">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="password" class="form__input" autofocus placeholder="Password">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <button class="form__button" type="submit">Continue</button>
+                                    <p class="form__text">
+                                        <a  class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            
+            
+            <div class="container">
+            </div>
+            <form id="form">
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search"
+                    class="search"
+                />
+            </form>
+        </header>
+        <main id="main">
+            <div class="movie_card" id="bright">
+                <div class="info_section">
+                  <div class="movie_header">
+                    <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg"/>
+                    <h1>Bright</h1>
+                    <h4>2017, David Ayer</h4>
+                    <span class="minutes">117 min</span>
+                    <p class="type">Action, Crime, Fantasy</p>
+                  </div>
+                  <div class="movie_desc">
+                    <p class="text">
+                      Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. 
+                    </p>
+                  </div>
+                </div>
+            </div>
+            
+            <section id="movies-list">
+                <!--box-1------------------------>
+                <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-1.jpg" class="movies_">
+                        
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Aladdin
+                    </a>
+                </div>
+                 <!--box-2------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-2.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Fantastic beasts and where to find Them
+                    </a>
+                </div>
+                 <!--box-3------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-3.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        The Croods 
+                    </a>
+                </div>
+                 <!--box-4------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-4.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Toy Story 3
+                    </a>
+                </div>
+                 <!--box-5------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-5.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Coco
+                    </a>
+                </div>
+                 <!--box-6------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-6.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Star Wars: The Rise of Skywalker
+                    </a>
+                </div>
+                 <!--box-7------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-7.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Rogue One
+                    </a>
+                </div>
+                 <!--box-8------------------------>
+                 <div class="movies-box">
+                    <!--img------------>
+                    <div class="movies-img">
+                        
+                        <img src="img/l-8.jpg">
+                    </div>
+                    <!--text--------->
+                    <a href="#">
+                        Venom II
+                    </a>
+                </div>
+            </section>
+                
+            </section>
+        </main>
+    </body>
+</html>
