@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Movie App</title>
         <link rel="stylesheet" href="src/style.css" />
-        <script src="main.js" defer></script>
-
+        <script src="src/script.js" defer></script>
     </head>
     <body>
         <header>
@@ -15,70 +14,60 @@
                     <li id="item"> <a href="index.html">Home</a></li>
                     <li id="item"> <a href="about-us.html" >About us</a></li>
                     <li id="item"> <a href="contact-us.html">Contact us</a></li>
-<<<<<<< HEAD
-                    <button onclick="togglePopup()">Login/Register</button>
-                    <div class="popup" id="popup-1">
-=======
-                    <li>
-                       <button onclick="togglePopup()">Login/Register</button>
-                       <div class="popup" id="popup-1">
->>>>>>> fa945e9b02d8049f168e85eb3b4ec8e2bfe24468
-                        <div class="overlay"></div>
-                        <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
-                            <form class="form" id="login">
-                                <h1 class="form__title">Login/Register</h1>
-                                <div class="form__message form__message--error"></div>
-                                <div class="form__input-group">
-                                    <input type="text" class="form__input" autofocus placeholder="Username or email">
-                                    <div class="form__input-error-message"></div>
-                                </div>
-                                <div class="form__input-group">
-                                    <input type="password" class="form__input" autofocus placeholder="Password">
-                                    <div class="form__input-error-message"></div>
-                                </div>
-                                <button class="form__button" type="submit">Continue</button>
-                                <p class="form__text">
-                                    <a href="#" class="form__link">Forgotten your password?</a>
-                                </p>
-                                <p class="form__text">
-                                    <a  class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account?</a>
-                                </p>
-                            </form>
-                            <form class="form form--hidden" id="createAccount">
-                                <h1 class="form__title">Create Account</h1>
-                                <div class="form__message form__message--error"></div>
-                                <div class="form__input-group">
-                                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
-                                    <div class="form__input-error-message"></div>
-                                </div>
-                                <div class="form__input-group">
-                                    <input type="text" class="form__input" autofocus placeholder="Email Address">
-                                    <div class="form__input-error-message"></div>
-                                </div>
-                                <div class="form__input-group">
-                                    <input type="password" class="form__input" autofocus placeholder="Password">
-                                    <div class="form__input-error-message"></div>
-                                </div>
-                                <div class="form__input-group">
-                                    <input type="password" class="form__input" autofocus placeholder="Confirm password">
-                                    <div class="form__input-error-message"></div>
-                                </div>
-                                <button class="form__button" type="submit">Continue</button>
-                                <p class="form__text">
-                                    <a  class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
-                                </p>
-                            </form>
+                    <li id="popup-login">
+                        <button onclick="togglePopup()">Login/Register</button>
+                        <div class="popup" id="popup-1">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                                <form class="form" id="login">
+                                    <h1 class="form__title">Login/Register</h1>
+                                    <div class="form__message form__message--error"></div>
+                                    <div class="form__input-group">
+                                        <input type="text" class="form__input" autofocus placeholder="Username or email">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="password" class="form__input" autofocus placeholder="Password">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <button class="form__button" type="submit">Continue</button>
+                                    <p class="form__text">
+                                        <a href="#" class="form__link">Forgotten your password?</a>
+                                    </p>
+                                    <p class="form__text">
+                                        <a  class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account?</a>
+                                    </p>
+                                </form>
+                                <form class="form form--hidden" id="createAccount">
+                                    <h1 class="form__title">Create Account</h1>
+                                    <div class="form__message form__message--error"></div>
+                                    <div class="form__input-group">
+                                        <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="text" class="form__input" autofocus placeholder="Email Address">
+                                     <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="password" class="form__input" autofocus placeholder="Password">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                                        <div class="form__input-error-message"></div>
+                                    </div>
+                                    <button class="form__button" type="submit">Continue</button>
+                                    <p class="form__text">
+                                        <a  class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                                    </p>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </li>
-<<<<<<< HEAD
-            </ul>
-        </div>
-=======
+                    </li>
                 </ul>
             </div>
->>>>>>> fa945e9b02d8049f168e85eb3b4ec8e2bfe24468
             
             
             <div class="container">
