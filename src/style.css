@@ -390,7 +390,7 @@ ul {
 }
 .headerList a{
     text-decoration: none;
-    color: white
+    color: white;
 }
 .headerList {
     flex-wrap: nowrap;
@@ -436,7 +436,7 @@ ul {
 }
 input{
     height: 45px;
-    color: #ffffff;
+    color:rgb(20, 20, 19);
 }
 form .submit{
 
@@ -538,7 +538,9 @@ form .submit{
 .form__text {
     text-align: center;
 }
-
+.form__text a{
+  color:black;
+} 
 .form__link {
     color: var(--color-secondary);
     text-decoration: none;
@@ -546,7 +548,7 @@ form .submit{
 }
 
 .form__link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 header {
