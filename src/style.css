@@ -6,66 +6,65 @@
   margin: 0;
 }
 
-.slider{
-  width: 1201px;
-  height: 600px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 3px 20px rgba(0,0,0,0.5);
-}
-.slider:hover{
-  transform: scale(1.02);
-  transition: all 0.4s;
-  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+
+#slideshow { 
+  overflow: hidden; 
+  height: 600px; 
+  width: 1200px; 
+  margin: 0 auto; 
+  border-radius: 10px ;
+} 
+.slide { 
+  float: left; 
+  height: 600px; 
+  width: 1200px; 
+} 
+.slide-wrapper { 
+  /* Calculate the total width on the 
+  basis of number of slides*/ 
+  width: calc(1200px * 5); 
+  animation: slide 25s ease; 
+} 
+.slide:nth-child(1) { 
+  background: inherit; 
+} 
+.slide:nth-child(2) { 
+  background: inherit; 
+} 
+  
+.slide:nth-child(3) { 
+  background: inherit; 
+} 
+  
+.slide:nth-child(4) { 
+  background: inherit; 
+} 
+.slide:nth-child(5) { 
+  background: inherit; 
+} 
+@keyframes slide { 
+  /* Calculate the margin-left for  
+  each of the slides */
+  18% { 
+    margin-left: 0px; 
+  } 
+  
+  36% { 
+    margin-left: calc(-1200px * 1); 
+  } 
+  
+  54% { 
+    margin-left: calc(-1200px * 2); 
+  } 
+  
+  72% { 
+    margin-left: calc(-1200px * 3); 
+  } 
+  90% { 
+    margin-left: calc(-1200px * 4); 
+  } 
 }
 
-.slides{
-  width: 500%;
-  height: 600px;
-  display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-/*css for manual navigation*/
-.navigation-manual{
-  position: absolute;
-  width: 1200px;
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn{
-  border: 4px solid #ffffff;
-  padding: 8px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-.manual-btn:not(:last-child){
-  margin-right: 40px;
-}
-.manual-btn:hover{
-  background: white;
-}
-#radio1:checked ~ .first{
-  margin-left: 0;
-}
-#radio2:checked ~ .first{
-  margin-left: -20%;
-}
-#radio3:checked ~ .first{
-  margin-left: -40%;
-}
-#radio4:checked ~ .first{
-  margin-left: -60%;
-}
-#radio5:checked ~ .first{
-  margin-left: -80%;
-}
 
 .movie_card{
     display: flex;
@@ -77,8 +76,7 @@
   margin: 10px auto; 
   overflow: hidden;
   border-radius: 10px;
-  transition: all 0.4s;
-  background-image: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");          
+  transition: all 0.4s;         
   background-size: cover;
 }
 
@@ -148,13 +146,21 @@
         margin:0px 2%;
     }
     .movies-img{
-        width:100%;
+      display: flex;
+        width: 280px;
         height: 400px;
         position: relative;
+        justify-content: center;
+        z-index: 2;
+        transition: all 0.5s ease-in-out 0s;
+        cursor: pointer;
     }
     .movies-img img{
-        width: 100%;
-        height: 100%;
+        min-width: 280px;
+        min-height: 280px;
+        margin-top: 10px;
+        border-radius: 5px; 
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.8);
         object-fit: cover;
     }
     .movies-box a{
@@ -171,17 +177,38 @@
         margin: 20px;
     }
     .movies-box:hover{
-        transform: translateY(-10px);
-        transition: all ease 0.2s;
+        margin-top: 0px;
+        
+    }
+    .movies-box:hover .movies-img{
+      transform: translateY(-100px);
+    }
+    .movies-content{
+      position: relative;
+      text-align: center;
+      margin-top: -110px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+      color: rgb(255, 255, 255);
+    }
+    #movies-list .movies-box:hover .movies-content{
+      opacity: 1;
+      animation: stretch 1.2s forwards;
     }
     #movies-list{
+      object-fit: cover;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
       .movies-box{
-        width:300px;
+        min-height: 500px;
+        background: inherit;
+        max-width: 280px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -189,10 +216,24 @@
         box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
         margin: 20px;
         border-radius: 5px;
-        overflow: hidden;
+        /*overflow: hidden;*/
         border-top: 3px solid #292929;
+        transition: all 0.5s ease-in-out 0s;
     }
-
+    .movies-box >*:fourth-{
+      
+    }
+    @keyframes stretch {
+      from{
+          visibility: hidden;
+          top: -80px;
+      }
+      to{
+          visibility: visible;
+          top: 0px;
+      }
+  }
+  
 
 @media screen and (min-width: 768px) {
   .movie_header{
@@ -244,10 +285,27 @@
 
 #bright{
   box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  background-image: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg"); 
 }
   #bright:hover{
     box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
   }
+#legend{
+  height: 600px;
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  background-image: url("https://wallpaperaccess.com/full/2003592.jpg");
+}
+#legend:hover{
+  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+}
+#joker{
+  height: 600px;
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  background-image: url('../img/Joker-scene.jpg');
+}
+#joker:hover{
+  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+}
 
 
   /*.bright_back{
@@ -358,6 +416,7 @@ body {
 .form__button{
     font: 500 1rem "Poppins", sans-serif;
 }
+
 .form--hidden {
     display: none;
 }
@@ -529,6 +588,7 @@ form .submit{
 
 .form__button:hover {
     background: var(--color-primary-dark);
+    
 }
 
 .form__button:active {
@@ -537,6 +597,11 @@ form .submit{
 
 .form__text {
     text-align: center;
+    
+}
+.form__text a{
+  color:rgb(20, 20, 19);
+  
 }
 
 .form__link {
