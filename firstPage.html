@@ -1,58 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Movies  |  Home</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="src/firstcss.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wazzap</title>
+    <link rel="stylesheet" type="text/css" href="src/firstcss.css">
+    <link rel="icon" href="img/favicon.ico">
+    <script src="https://kit.fontawesome.com/92572388a0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        // change day/night mode
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var now = new Date().getHours();
+
+            var aboutSection = document.querySelector(".about-container");
+            var aboutCard = document.querySelectorAll(".mov-card");
+            var quoteSection = document.querySelector(".quote-container");
+            var projectsSection = document.querySelector(".homepage-projects");
+
+            var texts = document.querySelectorAll(".about-contentBox h1, .about-contentBox p, .quote-heading, .quote, #already-picked, .mov-text, .mov-content, #slider-heading, #slider-subheading"); //select all the texts that need to change
+
+
+            function adjustColorMode() {
+                // Remove any existing classes
+                aboutSection.classList.remove('night');
+                aboutCard[0].classList.remove('night');
+                aboutCard[1].classList.remove('night');
+                quoteSection.classList.remove('night');
+                projectsSection.classList.remove('night');
+
+
+                // If it's nighttime, go dark mode
+                if (!(now > 8 && now < 18)) {
+                    aboutSection.classList.add('night');
+                    aboutCard[0].classList.add('night');    // add class to the first card
+                    aboutCard[1].classList.add('night');    // add class to the second card
+                    quoteSection.classList.add('night');
+                    projectsSection.classList.add('night');
+
+                    for (let i = 0; i < 10; i++) {
+                        texts[i].style.color = "#cecece";   // change color of every element of texts
+                    }
+                }
+            };
+
+            adjustColorMode();
+
+            // Check again every 10 minutes
+            setInterval(function () {
+                now = new Date().getHours();
+                adjustColorMode();
+            }, 1000 * 60 * 10);
+        });
+    </script>
+
+</head>
+
 <body>
-    <header>
-    <nav>
-        <a href="#" class="logo">MOVIES.</a>
-        <ul class="desktop">
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            
-        </ul>
-        <div class="mobile">
-            <label for="toggle">&#9776;</label>
-            <input type="checkbox" id="toggle">
-            <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                
-            </ul>
+    <button id="to-top-btn"><i class="fas fa-arrow-up"></i></button>
+    <section id="banner-section">
+
+        <div class="slideshow-item">
+            <img src="img/Vin.jpg" alt="">
         </div>
-    </nav>
+        <div class="slideshow-item">
+            <img src="img/Deadpool.jpg" alt="">
+        </div>
+        <div class="slideshow-item">
+            <img src="img/Harley.jpg" alt="">
+        </div>
+        <div class="slideshow-item">
+            <img src="img/TheRock.jpg" alt="">
+        </div>
+        <header>
+            <div class="logo-container">
+                <img src="img/Logo.JPG" id="logo" alt="logo" />
 
-    <h1>Stream Any Movie at Anytime with No Individual Movie Costs or Rental Fees.</h1>
-    <div class="btnGroup">
-        <a href="index.html" class="btnWhite">TRY IT FREE</a>
-        <div class="whiteBG"></div>
-    </div>
+            </div>
 
-   
-    <img src="img/ipad-pro.png" alt="ipad" class="ipad">
-    <img src="http://swingsetimagination.com/practice_web_moviesite/img/iphone.png" alt="iphone" class="iphone">
-</header>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="firstPage.html">HOME</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="index.html">OUR MOVIES</a></li>
+                    <li><a href="architect.html">ARCHITECTS</a></li>
+                    <li><a href="contact-us.html">CONTACT</a></li>
+                    <li id="log-out"><a href="login.html">LOG OUT</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <div class="search-bar">
+
+                    <input type="text" class="search-bar_input" placeholder="type to search" spellcheck="false" />
+
+                    <button class="search-bar_submit">
+                        <svg style="width: 50%; height: 50%;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005"
+                            style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                       S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                       c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                        M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <a id="log-out-btn" title="Log out" href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+            <!--  ---------------- Menu ---------------  -->
+            <div class="menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </header>
+        <section class="hero hero-container">
+            <div class="hero-content">
+                <h1 class="title">Make sure you are satisfied!</h1>
+                <p class="message">&quot;We don’t make movies to make more money. We make money to make more movies.&quot;</p>
+                <a href="#home-about" class="more-btn">Get to know us</a>
+            </div>
+
+            <div class="cards">
+                <a href="#home-developers">
+                    <div class="card card1">
+                        <h4>Discovery</h4>
+                        <p>Find young, talented and hardworking Developers.</p>
+                    </div>
+                </a>
+                <a href="#home-projects">
+                    <div class="card card2">
+                        <h4>Inspiration</h4>
+                        <p>Get inspired by their unique Creations.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
 
 
-<div class="callToAction">
-    <h1>Watch your favorite movies and explore similar titles. Get Started today</h1>
-    <a href="#" class="btnColor">GET STARTED</a>
-</div>
-<footer>
-    <div class="copy">
-        <a href="#" class="logo">MOVIES.</a>
-        <p>©2020 Movie Website, LLC.</p>
-    </div>
-    <ul>
-        <li><a href="#"></a>Account</li>
-        <li><a href="#"></a>Help Center</li>
-        <li><a href="#"></a>Terms</li>
-        <li><a href="#"></a>Privacy</li>
-    </ul>
-</footer>
+    </section>
+
+    <main>
+        <!----------------------About Us----------------------->
+        <div id="home-about" class="about-container">
+            <div class="about-card">
+                <div class="about-imgBox">
+                    <img src="img/meeting.jpg" alt="">
+                </div>
+
+                <div class="about-contentBox">
+                    <div class="about-content">
+                        <h1>About Us</h1>
+                        <p>Wazzap is an innovative, design-driven group invested in pushing creativity,
+                            collaboration and construction to deliver unique movies that inspire through form and
+                            delight through function and also breath-taking Quality.</p>
+                        <a href="about-us.html">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- Our Statistics ------------------------>
+        <div class="stat-container" onscroll="btnClick()">
+            <button id="count-btn" onclick="startCount();" style="display: none;">Count</button>
+            <div class="stat-heading">
+                <h1>Our history in numbers</h1>
+            </div>
+            <div class="stat-content">
+                <div class="stat-box">
+                    <i class="fas fa-user-tie" style="font-size: 30px ;"></i>
+                    <div class="statistics" data-stop-count="130">
+                        <span>0</span>
+                    </div>
+                    <span>Architects</span>
+                </div>
+
+                <div class="stat-box">
+                    <i class="fas fa-city" style="font-size: 30px ;"></i>
+                    <div class="statistics" data-stop-count="330">
+                        <span>0</span>
+                    </div>
+                    <span>Projects</span>
+                </div>
+
+
+                <div class="stat-box">
+                    <i class="fas fa-coffee" style="font-size: 30px ;"></i>
+                    <div class="statistics" data-stop-count="2021">
+                        <span>0</span>
+                    </div>
+                    <span>Coffees drinked</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!----------------------Quote of the day----------------------->
+        <div class="quote-container">
+            <div class="quote-heading">
+                <h1>Quote of the day</h1>
+            </div>
+            <div class="quote-body">
+                <div class="quote">
+                    <span>"When people ask me if I went to film school I tell them, 'No, I went to films.'"</span>
+                </div>
+                <div class="author">
+                    - Quentin Tarantino
+                </div>
+                <div class="quote-buttons">
+                    <div class="quote-btn">
+                        <button id="generate-btn">Pick one</button>
+                    </div>
+                    <div class="tweet-quote" style="display: none;">
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" target="_blank">
+                            <span>Tweet it!</span>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <br />
+                        <span id="already-picked">(Come back tomorrow to pick another one&excl;)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------Architects----------------------->
+        <div id="home-developers" class="mov-container">
+            <div class="mov-card">
+                <div class="mov-imgBox">
+                    <img src="img/Festoni.jpeg" alt="Feston Ahmeti">
+                </div>
+                <div class="mov-content">
+                    <h2>Feston Ahmeti</h2>
+                    <p style="font-size: 12px;">A strong believer in the ability of the Movie Industry and research
+                        combined with design thinking, for strengthening our societies and having a positive effect on
+                        the world.</p>
+                </div>
+            </div>
+
+            <div class="mov-text">
+                <h1>Developers</h1>
+                <p>Developers who have cooperated with us have always taken their career to the next level. <br />We are
+                    honored to have been part of their journey of getting to the top. <br />YOU can be the next one!</p>
+            </div>
+
+            <div class="mov-card">
+                <div class="mov-imgBox">
+                    <img src="img/Agnit.JPG" alt="Agnit Misini">
+                </div>
+                <div class="mov-content">
+                    <h2>Agnit Misini</h2>
+                    <p style="font-size: 12px;"> Young and highly creative developer. Has good communication skills and is known for dealing very well with clients.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------- Projects Section Begin ------------------>
+        <section id="home-projects" class="homepage-projects">
+            <div class="slider-title">
+                <h1 id="slider-heading">Suggestions</h1>
+                <p id="slider-subheading">Below you can take a look at our featured and recent Movies that have been
+                    added with
+                    our unique approach.</p>
+            </div>
+            <!-- Slider Begin -->
+            <div class="entire-slider">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Radio Buttons Start -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <!-- Slide Images Begin -->
+                        <div class="slide first">
+                            <img src="img/Avengers.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Furious.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Jack.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Star Wars.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- Button Navigation Begin -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Slider End -->
+            <div class="slider-btn">
+                <a href="index.html">
+                    <button class="projects-btn">More Movies</button>
+                </a>
+            </div>
+        </section>
+        <!--------------------- Projects Section End------------------------->
+
+
+        <!--------------Drag and Drop section------------------------->
+        <!--
+        A R C H I T E C T
+        H I C A T E C R T -->
+
+        <section class="home-game">
+            <h2>Did you get tired scrolling&quest;</h2>
+            <button id="play-btn">Let's play a game</button>
+
+            <div class="game-content">
+                <p class="game-description">Find the word by dragging the letters and dropping them to their correct
+                    position.<br /> If you find the required word, its letters will turn white and box borders will turn
+                    green.</p>
+
+                <div class="game-letters">
+                    <div class="box" draggable="true" style="background-color: #ff6384;" id="box-h"><span
+                            class="letter">E</span></div>
+                    <div class="box" draggable="true" style="background-color: #36a2eb;" id="box-i"><span
+                            class="letter">A</span></div>
+                    <div class="box" draggable="true" style="background-color: #ffce56;" id="box-c1"><span
+                            class="letter">N</span></div>
+                    <div class="box" draggable="true" style="background-color: #9966ff;" id="box-a"><span
+                            class="letter">S</span></div>
+                    <div class="box" draggable="true" style="background-color: #4bc0c0;" id="box-t1"><span
+                            class="letter">M</span></div>
+                    <div class="box" draggable="true" style="background-color: #2fd06f;" id="box-e"><span
+                            class="letter">I</span></div>
+                    <div class="box" draggable="true" style="background-color: #f0931b;" id="box-c2"><span
+                            class="letter">R</span></div>
+                    <div class="box" draggable="true" style="background-color: #4b68c0;" id="box-r"><span
+                            class="letter">T</span></div>
+                    <div class="box" draggable="true" style="background-color: #89c04b;" id="box-t2"><span
+                            class="letter">G</span></div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-container">
+                <img src="img/Logo.JPG" id="f-logo" alt="logo" />
+            </div>
+            <address><p>UBT - University for Science and Computer Engineering,</br>
+                Magjistralja Prishtine - Ferizaj - Rrethi te QMI, p.n.
+                10000, Prishtin&euml;,
+                Republic of Kosovo</p></address>
+            <ul class="socials">
+                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+            <p>Copyright &copy;2020 WAZZAP</p>
+        </div>
+    </footer>
+    <script src="src/home.js"></script>
+
+    <script>
+        if (navigator.serviceWorker) {                                           //check if browser supports serviceWorker
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register('./service-worker.js')
+                    .then(reg => console.log("Service Worker: Registered!"))     //if registered successfully, console log
+                    .catch(err => console.log(`Service Worker: Error: ${err}`)); //if registration fails, console log err
+            });
+        };
+    </script>
 </body>
+
 </html>

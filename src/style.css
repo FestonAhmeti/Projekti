@@ -220,9 +220,7 @@
         border-top: 3px solid #292929;
         transition: all 0.5s ease-in-out 0s;
     }
-    .movies-box >*:fourth-{
-      
-    }
+    
     @keyframes stretch {
       from{
           visibility: hidden;
@@ -660,10 +658,6 @@ main {
     position: relative;
     margin: 1rem;
     width: 300px;
-}
-
-.movie img {
-    width: 100%;
 }
 
 
