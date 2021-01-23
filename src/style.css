@@ -9,7 +9,7 @@
 .movie_card{
     display: flex;
     flex-wrap: wrap;
-  position: relative;
+  position: relative;     
   display: block;
   width: 1200px;
   height: 600px;

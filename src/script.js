@@ -10,7 +10,7 @@ getMovies(APIURL);
 
 async function getMovies(url) {
     const resp = await fetch(url);
-    const respData = await resp.json();
+    const respData = await resp.json();   
 
     console.log(respData);
 
