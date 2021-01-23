@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Movie App</title>
         <link rel="stylesheet" href="src/style.css" />
+        <link rel="icon" href="img/favicon.ico">
+        <link href="https://stackpath.bootstapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="src/script.js" defer></script>
     </head> 
     <body>
@@ -85,23 +87,104 @@
             </div>
         </li>
         <main id="main">
-            <div class="movie_card" id="bright">
-                <div class="info_section">
-                  <div class="movie_header">
-                    <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg"/>
-                    <h1>Bright</h1>
-                    <h4>2017, David Ayer</h4>
-                    <span class="minutes">117 min</span>
-                    <p class="type">Action, Crime, Fantasy</p>
-                  </div>
-                  <div class="movie_desc">
-                    <p class="text">
-                      Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. 
-                    </p>
-                  </div>
+            <div id="slideshow">
+            <div class="slide-wrapper">
+                <div class="slide">
+                    <div class="movie_card" id="bright">
+                        <div class="info_section">
+                        <div class="movie_header">
+                            <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg"/>
+                            <h1>Bright</h1>
+                            <h4>2017, David Ayer</h4>
+                            <span class="minutes">117 min</span>
+                            <p class="type">Action, Crime, Fantasy</p>
+                        </div>
+                        <div class="movie_desc">
+                            <p class="text">
+                            Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="movie_card" id="legend">
+                        <div class="info_section">
+                        <div class="movie_header">
+                            <img class="locandina" src="img/I-AM-LEGEND.jpg"/>
+                            <h1>I am Legend</h1>
+                            <h4>2007, David Ayer</h4>
+                            <span class="minutes">117 min</span>
+                            <p class="type">Action, Crime, Fantasy</p>
+                        </div>
+                        <div class="movie_desc">
+                            <p class="text">
+                                Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="movie_card" id="joker">
+                        <div class="info_section">
+                        <div class="movie_header">
+                            <img class="locandina" src="img/JokerPoster.jpg"/>
+                            <h1>Joker</h1>
+                            <h4>2019, Todd Phillips</h4>
+                            <span class="minutes">122 min</span>
+                            <p class="type">Crime,Drama,Thriller</p>
+                        </div>
+                        <div class="movie_desc">
+                            <p class="text">
+                                In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="movie_card" id="bright">
+                        <div class="info_section">
+                        <div class="movie_header">
+                            <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg"/>
+                            <h1>Bright</h1>
+                            <h4>2017, David Ayer</h4>
+                            <span class="minutes">117 min</span>
+                            <p class="type">Action, Crime, Fantasy</p>
+                        </div>
+                        <div class="movie_desc">
+                            <p class="text">
+                            Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="movie_card" id="bright">
+                        <div class="info_section">
+                        <div class="movie_header">
+                            <img class="locandina" src="img/.png" alt=""/>
+                            <h1>Bright</h1>
+                            <h4>2017, David Ayer</h4>
+                            <span class="minutes">117 min</span>
+                            <p class="type">Action, Crime, Fantasy</p>
+                        </div>
+                        <div class="movie_desc">
+                            <p class="text">
+                            Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+            
 
+                    
+            
             <section id="movies-list">
                 <!--box-1------------------------>
                 <div class="movies-box">
@@ -110,6 +193,9 @@
                         
                         <img src="img/l-1.jpg" class="movies_">
                         
+                    </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.-</p>
                     </div>
                     <!--text--------->
                     <a href="#">
@@ -123,6 +209,9 @@
                         
                         <img src="img/l-2.jpg">
                     </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-The adventures of writer Newt Scamander in New York's secret community of witches and wizards seventy years before Harry Potter reads his book in school.-</p>
+                    </div>
                     <!--text--------->
                     <a href="#">
                         Fantastic beasts and where to find Them
@@ -134,6 +223,9 @@
                     <div class="movies-img">
                         
                         <img src="img/l-3.jpg">
+                    </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-After their cave is destroyed, a caveman family must trek through an unfamiliar fantastical world with the help of an inventive boy.-</p>
                     </div>
                     <!--text--------->
                     <a href="#">
@@ -147,6 +239,9 @@
                         
                         <img src="img/l-4.jpg">
                     </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.-</p>
+                    </div>
                     <!--text--------->
                     <a href="#">
                         Toy Story 3
@@ -158,6 +253,9 @@
                     <div class="movies-img">
                         
                         <img src="img/l-5.jpg">
+                    </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.-</p>
                     </div>
                     <!--text--------->
                     <a href="#">
@@ -171,6 +269,9 @@
                         
                         <img src="img/l-6.jpg">
                     </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end.-</p>
+                    </div>
                     <!--text--------->
                     <a href="#">
                         Star Wars: The Rise of Skywalker
@@ -182,6 +283,9 @@
                     <div class="movies-img">
                         
                         <img src="img/l-7.jpg">
+                    </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-The daughter of an Imperial scientist joins the Rebel Alliance in a risky move to steal the plans for the Death Star.-</p>
                     </div>
                     <!--text--------->
                     <a href="#">
@@ -195,14 +299,32 @@
                         
                         <img src="img/l-8.jpg">
                     </div>
+                    <div class="movies-content">
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">-A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.-</p>
+                    </div>
                     <!--text--------->
                     <a href="#">
                         Venom II
                     </a>
                 </div>
             </section>
-                
-            
         </main>
+        <!--<script>
+            var x=document.querySelector("#login");
+            var y=document.querySelector("#register");
+            var z=document.querySelector("#btn");
+    
+            function register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+    
+            function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";
+            }
+        </script>-->
     </body>
 </html>
