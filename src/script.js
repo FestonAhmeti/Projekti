@@ -5,6 +5,8 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
+APIURL = "/movies";
+
 // initially get fav movies
 getMovies(APIURL);
 
@@ -86,6 +88,7 @@ function clearInputError(inputElement) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Loading dom content...");
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
 
