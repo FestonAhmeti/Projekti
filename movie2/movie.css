@@ -1,0 +1,141 @@
+.dark-mode {
+    --text-color: rgb(255, 255, 255);
+    --body-bg: #121212;
+    --loader-ring: #7abdeb;
+    --ball-border: white;
+  }
+  :root {
+    --text-color: rgb(0, 0, 0);
+    --body-bg: #edfdff;
+    --loader-ring: #0371bb;
+    --ball-border: black;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    transition: ease 1s;
+  }
+  
+  #movieGeneratedDetails {
+    margin: 5% 0 2% 5%;
+    display: flex;
+    visibility: hidden;
+  }
+  
+  #trailerBlock {
+    margin-left: 5%;
+    visibility: hidden;
+    width: fit-content;
+  }
+  
+  #trailer-title {
+    font-size: 1.6em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  
+  #trailer {
+    width: 800px;
+    height: 450px;
+  }
+  #poster {
+    align-self: flex-start;
+    object-fit: cover;
+  }
+  
+  #more-info {
+    margin-left: 4%;
+  }
+  
+  #title {
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+  #releasedRating {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  #runtimeGenre {
+    margin-top: 0.2%;
+    font-size: 1.1em;
+  }
+  
+  #director {
+    margin-top: 1%;
+    font-size: 1.05em;
+  }
+  #actors {
+    font-size: 1.05em;
+  }
+  #plot {
+    margin-top: 2%;
+    width: 50%;
+    font-size: 1.1em;
+  }
+  
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+  }
+  
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+  
+    border-radius: 80%;
+  
+    border-top: 15px solid var(--loader-ring);
+    border-bottom: 15px solid var(--loader-ring);
+    animation: spin 1.1s linear infinite;
+  }
+  
+  #circle {
+    margin: 24px auto auto auto;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    vertical-align: super;
+    animation: growShrink 2s linear infinite alternate;
+  }
+  
+  @keyframes growShrink {
+    0% {
+      transform: scale(1);
+      background-color: var(--body-bg);
+    }
+    35% {
+      transform: scale(1.1);
+      background-color: gray;
+    }
+    100% {
+      transform: scale(1.5);
+      background-color: var(--loader-ring);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

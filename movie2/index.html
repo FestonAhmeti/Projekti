@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+  
+  <meta charset="UTF-8" />
+  <title>Kino FIEK - Ballina</title>
+  <meta name="title" content="Kino FIEK">
+  <meta name="description" content="Online cinema catalog and ticket ordering website">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kinofiek-2020.netlify.app/">
+  <meta property="og:title" content="Kino FIEK">
+  <meta property="og:description" content="Online cinema catalog and ticket ordering website">
+  <meta property="og:image" content="/images/KinoFiekMetaData.png">
+</head>
+
+<body>
+
+  <!--Nav bar, searchbar-->
+
+  <nav>
+    <ul class="navBar">
+      <li><a href="#">Home</a></li>
+      <li><a href="/katalogu.html">Katalogu</a></li>
+      <li><a href="/events.html">Evente</a></li>
+      <li><a href="/rezervo.html">Rezervo</a></li>
+      <li><a href="/kontakti.html">Kontakto</a></li>
+    </ul>
+    <div class="searchContainer">
+      <input id="searchBar" type="text" name="Kerko" placeholder="Kërko filmin" />
+      <ul id="results">
+  <li>
+    <a onclick="setMovieID('tt0099785')" >
+      <img src="/images/movies/HomeAlone.jpg" alt="">
+      <div class="mvtitle">Home Alone</div>
+      </a>
+  </li>
+  <li>
+    <a onclick="setMovieID('tt1838556')">
+      <img src="/images/movies/HonestThief.jpeg" alt="">
+      <div class="mvtitle">Honest Thief</div></a>
+  </li>
+  <li>
+    <a  onclick="setMovieID('tt8936646')">
+      <img src="/images/movies/Extraction.jpg" alt="">
+      <div class="mvtitle">Extraction</div></a>
+  </li>
+  <li>
+    <a onclick="setMovieID('tt2948372')">
+      <img src="/images/movies/Soul.jpeg" alt="">
+      <div class="mvtitle">Soul</div></a>
+  </li>
+  <li>
+    <a onclick="setMovieID('tt10310140')">
+      <img src="/images/movies/Fatman.jpg" alt="">
+      <div class="mvtitle">Fatman</div></a>
+  </li>
+</ul>
+    </div>
+  </nav>
+<div id="top"></div>
+  <!--Slideshow-->
+
+  <div class="slideshow">
+    <div class="slide" onclick="setMovieID('tt1302006')">
+      <div class="title">The Irishman</div>
+      <img src="/images/movies/TheIrishman.jpg" style="width: 100%" />
+    </div>
+    <div class="slide" onclick="setMovieID('tt0099785')">
+      <div class="title">Home Alone</div>
+      <img src="/images/movies/HomeAlone.jpg" style="width: 100%" />
+    </div>
+    <div class="slide" onclick="setMovieID('tt6723592')">
+      <div class="title">Tenet</div>
+      <img src="/images/movies/Tenet.png" style="width: 100%" />
+    </div>
+
+    <a class="prev" onclick="setSlide(-1)">&#10094;</a>
+    <a class="next" onclick="setSlide(1)">&#10095;</a>
+    <div id='slideloader' class="loader"></div>
+
+  </div>
+
+  <!--Weeks Most Watched Movies-->
+
+  <div class="titull">Filmat më të shikuar këtë javë</div>
+
+  <div class="movies-catalog">
+    <div class="movie" onmouseover="makeVisible(info1)" onmouseout="makeUnvisible(info1)">
+      <a>
+        <img src="/images/movies/HonestThief.jpeg" alt="Honest Thief" onclick="setMovieID('tt1838556')" />
+      </a>
+      <div id="info1" class="info">
+        <div class="info-title">Honest Thief</div>
+        <div class="rating">6.0 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info2)" onmouseout="makeUnvisible(info2)">
+      <a>
+        <img src="/images/movies/Soul.jpeg" alt="Soul" onclick="setMovieID('tt2948372')" />
+      </a>
+      <div id="info2" class="info">
+        <div class="info-title">Soul</div>
+        <div class="rating">8.2 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info3)" onmouseout="makeUnvisible(info3)">
+      <a>
+        <img src="/images/movies/Greenland.png" alt="Green Land" onclick="setMovieID('tt7737786')" />
+      </a>
+      <div id="info3" class="info">
+        <div class="info-title">Greenland</div>
+        <div class="rating">6.4 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info4)" onmouseout="makeUnvisible(info4)">
+      <a>
+        <img onclick="setMovieID('tt8111088')" src="/images/movies/SpenserConfidential.jpg"
+          alt="Spenser Confidential" />
+      </a>
+      <div id="info4" class="info">
+        <div class="info-title">Spenser Confidential</div>
+        <div class="rating">6.2 &#9733;</div>
+      </div>
+    </div>
+  </div>
+
+  <a onclick="showMore()" id="show-more">shiko më shumë...</a>
+
+  <!-- More Movies -->
+
+  <div id="more-movies1">
+    <div class="movie" onmouseover="makeVisible(info5)" onmouseout="makeUnvisible(info5)">
+      <a>
+        <img onclick="setMovieID('tt10059518')" src="/images/movies/Unhinged.jpg" alt="Unhinged" />
+      </a>
+      <div id="info5" class="info">
+        <div class="info-title">Unhinged</div>
+        <div class="rating">6.0 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info6)" onmouseout="makeUnvisible(info6)">
+      <a>
+        <img onclick="setMovieID('tt7126948')" src="/images/movies/WonderWoman1984.jpg" alt="Wonder Woman 1984" />
+      </a>
+      <div id="info6" class="info">
+        <div class="info-title">Wonder Woman 1984</div>
+        <div class="rating">5.6 &#9733;</div>
+      </div>
+    </div>
+    <br />
+    <div class="movie" onmouseover="makeVisible(info7)" onmouseout="makeUnvisible(info7)">
+      <a>
+        <img onclick="setMovieID('tt10539608')" src="/images/movies/TheMidnightSky.jpg" alt="The Midnight Sky" />
+      </a>
+      <div id="info7" class="info">
+        <div class="info-title">The Midnight Sky</div>
+        <div class="rating">5.6 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info8)" onmouseout="makeUnvisible(info8)">
+      <a>
+        <img onclick="setMovieID('tt7395114')" src="/images/movies/TheDevilAllTheTime.jpg"
+          alt="The Devil All the Time" />
+      </a>
+      <div id="info8" class="info">
+        <div class="info-title">The Devil All the Time</div>
+        <div class="rating">7.1 &#9733;</div>
+      </div>
+    </div>
+  </div>
+  <div id="more-movies2">
+    <div class="movie" onmouseover="makeVisible(info9)" onmouseout="makeUnvisible(info9)">
+      <a>
+        <img onclick="setMovieID('tt10310140')" src="/images/movies/Fatman.jpg" alt="Fatman" />
+      </a>
+      <div id="info9" class="info">
+        <div class="info-title">Fatman</div>
+        <div class="rating">5.9 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info10)" onmouseout="makeUnvisible(info10)">
+      <a>
+        <img onclick="setMovieID('tt7979142')" src="/images/movies/TheNightClerk.jpg" alt="The Night Clerk" />
+      </a>
+      <div id="info10" class="info">
+        <div class="info-title">The Night Clerk</div>
+        <div class="rating">5.5 &#9733;</div>
+      </div>
+    </div>
+    <br />
+    <div class="movie" onmouseover="makeVisible(info11)" onmouseout="makeUnvisible(info11)">
+      <a>
+        <img onclick="setMovieID('tt8936646')" src="/images/movies/Extraction.jpg" alt="Extraction" />
+      </a>
+      <div id="info11" class="info">
+        <div class="info-title">Extraction</div>
+        <div class="rating">6.7 &#9733;</div>
+      </div>
+    </div>
+    <div class="movie" onmouseover="makeVisible(info12)" onmouseout="makeUnvisible(info12)">
+      <a>
+        <img onclick="setMovieID('tt7504726')" src="/images/movies/TheCallOfTheWild.jpg" alt="The Call of the Wild" />
+      </a>
+      <div id="info12" class="info">
+        <div class="info-title">The Call of the Wild</div>
+        <div class="rating">6.8 &#9733;</div>
+      </div>
+    </div>
+  </div>
+  <a onclick="showLess()" id="show-less">më pak</a>
+
+  <br />
+  <br />
+
+  <a href="/katalogu.html" class="catalogBtn">Shiko të gjithë katalogun</a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="grid-container">
+      <div class="footer-desc">
+        <div class="footer-title">
+          <h5>Kino Fiek</h5>
+        </div>
+        <p>
+          Kinofiek&copy; është website i zhvilluar me HTML5, CSS3,
+          JavaScript dhe jQuery ku përdoruesit mund të shohin se
+          cilët janë filmat më të shikuar të javës, informata rreth
+          k&#235;tyre filmave, katalogun e kinemas&#x000EB;, shohin
+          evente t&euml; kinemasë dhe rezervojnë bileta.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-title">
+          <h5>Navigacion</h5>
+        </div>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="/katalogu.html">Katalogu</a></li>
+          <li><a href="/events.html">Evente</a></li>
+          <li><a href="/rezervo.html">Rezervo</a></li>
+          <li><a href="/kontakti.html">Kontakto</a></li>
+          <li><a target="_blank" href="/extras.html">Extras</a></li>
+        </ul>
+      </div>
+
+      <div class="cinema">
+        <div class="footer-title">
+          <h5>Lokacioni</h5>
+        </div>
+        <p>
+          Bregu i Diellit, p.n.<br>
+          10000 Prishtinë, <br>
+          Republika e Kosovës
+        </p>
+        <br>
+        <a  onclick="calculate()" id="distance-btn"> <nobr> Llogarit distancën </nobr></a>
+      </div>
+
+      <canvas id="darkModeBtn" width="150" height="150"></canvas>
+      <div title="Website nuk ka funksionalitet te plote" id="offline">
+        <ul>
+          <li><img id='wifi' width="25px" src="/images/nowifi.png" alt="">
+        </li>
+          <li><p id='wifistatus'>Nuk jeni kyqur ne internet</p></li>
+          <li><a id='reload' onclick="location.reload()">Reload</a></li>
+        </ul>
+        
+      </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="/scripts/theme.js"></script>
+
+  <script src="/scripts/slideshow.js"></script>
+  <script src="/scripts/movies-catalog.js"></script>
+  <script src="/scripts/location.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+
+        navigator.onLine ? console.log('online') : offlineState();
+
+        navigator.serviceWorker.register('/offline.js').then(function (registration) {
+          console.log('Service worker success');
+        }).catch(function (error) {
+          console.log('Service worker failed');
+        });
+      });
+    }
+  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    let offline = document.getElementById('offline');
+    $('#results').hide();
+
+    $('#searchBar').focusout(()=>{
+        $('#results').slideUp();
+    })
+    $('#searchBar').focusin(()=>{
+        $('#results').slideDown();
+    })
+
+    function offlineState(){
+      offline.style.display = 'flex';
+      $('#wifi').attr('src','/images/nowifi.png');
+      $('#wifistatus').html('Nuk jeni kyqur ne internet')
+      document.getElementById('reload').style.display = 'none'
+      offline.style.backgroundColor = 'rgba(255, 154, 154, 0.6)';
+      document.getElementById('show-more').style.display = 'none';
+    }
+
+    window.addEventListener('online', () => {
+      $('#wifi').attr('src','/images/wifi.png');
+      $('#wifistatus').html('Ju jeni i kyqur tani');
+      document.getElementById('reload').style.display = 'inline';
+      offline.style.backgroundColor = 'rgba(186, 255, 154, 0.6)';      
+    });
+    window.addEventListener('offline', () => {
+        offlineState();
+    });
+  </script>
+</body>
+
+</html>
