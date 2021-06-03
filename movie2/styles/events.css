@@ -35,7 +35,7 @@ nav {
     color: var(--text-color);
   }
   .searchBar {
-    background-image: url(/images/searchIcon.png);
+    background-image: url(../images/searchIcon.png);
     color: var(--text-color);
     background-position: 96% 6px;
     background-size: 23px;
@@ -129,7 +129,7 @@ p.dita {
 }
 
 #dkino {
-  background-image: url(/images/popcorn.jpg);
+  background-image: url(../images/popcorn.jpg);
   border-radius: 1%;
   background-repeat: no-repeat;
   background-size:cover;
@@ -139,7 +139,7 @@ p.dita {
 
 
 #hallo {
-  background-image: url(/images/halloween.jpg);
+  background-image: url(../images/halloween.jpg);
   border-radius: 1%;
   background-size: cover;
 }
@@ -219,13 +219,13 @@ ol.hallo {
  }
 
 #foto1{
-  background-image: url(/images/memories.jpeg);
+  background-image: url(../images/memories.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1%;
 }
 #oraret {
-  background-image: url(/images/evente2.jpg);
+  background-image: url(../images/evente2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1%;
@@ -265,7 +265,7 @@ h3.oraret{
 }
 
 #ffund {
-  background-image: url(/images/christmas.jpg);
+  background-image: url(../images/christmas.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1%;
@@ -303,7 +303,7 @@ div.countdown {
 }
 
 div#ddashuri {
-  background-image: url(/images/hearts2.png), url(/images/love.jpg);
+  background-image: url(../images/hearts2.png), url(../images/love.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1%;

@@ -3,8 +3,8 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles/style.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"/>
   
   <meta charset="UTF-8" />
   <title>Kino FIEK - Ballina</title>
@@ -26,38 +26,38 @@
   <nav>
     <ul class="navBar">
       <li><a href="#">Home</a></li>
-      <li><a href="/katalogu.html">Katalogu</a></li>
-      <li><a href="/events.html">Evente</a></li>
-      <li><a href="/rezervo.html">Rezervo</a></li>
-      <li><a href="/kontakti.html">Kontakto</a></li>
+      <li><a href="./katalogu.html">Katalogu</a></li>
+      <li><a href="./events.html">Evente</a></li>
+      <li><a href="./rezervo.html">Rezervo</a></li>
+      <li><a href="./kontakti.html">Kontakto</a></li>
     </ul>
     <div class="searchContainer">
       <input id="searchBar" type="text" name="Kerko" placeholder="Kërko filmin" />
       <ul id="results">
   <li>
     <a onclick="setMovieID('tt0099785')" >
-      <img src="/images/movies/HomeAlone.jpg" alt="">
+      <img src="./images/movies/HomeAlone.jpg" alt="">
       <div class="mvtitle">Home Alone</div>
       </a>
   </li>
   <li>
     <a onclick="setMovieID('tt1838556')">
-      <img src="/images/movies/HonestThief.jpeg" alt="">
+      <img src="./images/movies/HonestThief.jpeg" alt="">
       <div class="mvtitle">Honest Thief</div></a>
   </li>
   <li>
     <a  onclick="setMovieID('tt8936646')">
-      <img src="/images/movies/Extraction.jpg" alt="">
+      <img src="./images/movies/Extraction.jpg" alt="">
       <div class="mvtitle">Extraction</div></a>
   </li>
   <li>
     <a onclick="setMovieID('tt2948372')">
-      <img src="/images/movies/Soul.jpeg" alt="">
+      <img src="./images/movies/Soul.jpeg" alt="">
       <div class="mvtitle">Soul</div></a>
   </li>
   <li>
     <a onclick="setMovieID('tt10310140')">
-      <img src="/images/movies/Fatman.jpg" alt="">
+      <img src="./images/movies/Fatman.jpg" alt="">
       <div class="mvtitle">Fatman</div></a>
   </li>
 </ul>
@@ -69,15 +69,15 @@
   <div class="slideshow">
     <div class="slide" onclick="setMovieID('tt1302006')">
       <div class="title">The Irishman</div>
-      <img src="/images/movies/TheIrishman.jpg" style="width: 100%" />
+      <img src="./images/movies/TheIrishman.jpg" style="width: 100%" />
     </div>
     <div class="slide" onclick="setMovieID('tt0099785')">
       <div class="title">Home Alone</div>
-      <img src="/images/movies/HomeAlone.jpg" style="width: 100%" />
+      <img src="./images/movies/HomeAlone.jpg" style="width: 100%" />
     </div>
     <div class="slide" onclick="setMovieID('tt6723592')">
       <div class="title">Tenet</div>
-      <img src="/images/movies/Tenet.png" style="width: 100%" />
+      <img src="./images/movies/Tenet.png" style="width: 100%" />
     </div>
 
     <a class="prev" onclick="setSlide(-1)">&#10094;</a>
@@ -93,7 +93,7 @@
   <div class="movies-catalog">
     <div class="movie" onmouseover="makeVisible(info1)" onmouseout="makeUnvisible(info1)">
       <a>
-        <img src="/images/movies/HonestThief.jpeg" alt="Honest Thief" onclick="setMovieID('tt1838556')" />
+        <img src="./images/movies/HonestThief.jpeg" alt="Honest Thief" onclick="setMovieID('tt1838556')" />
       </a>
       <div id="info1" class="info">
         <div class="info-title">Honest Thief</div>
@@ -102,7 +102,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info2)" onmouseout="makeUnvisible(info2)">
       <a>
-        <img src="/images/movies/Soul.jpeg" alt="Soul" onclick="setMovieID('tt2948372')" />
+        <img src="./images/movies/Soul.jpeg" alt="Soul" onclick="setMovieID('tt2948372')" />
       </a>
       <div id="info2" class="info">
         <div class="info-title">Soul</div>
@@ -111,7 +111,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info3)" onmouseout="makeUnvisible(info3)">
       <a>
-        <img src="/images/movies/Greenland.png" alt="Green Land" onclick="setMovieID('tt7737786')" />
+        <img src="./images/movies/Greenland.png" alt="Green Land" onclick="setMovieID('tt7737786')" />
       </a>
       <div id="info3" class="info">
         <div class="info-title">Greenland</div>
@@ -120,7 +120,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info4)" onmouseout="makeUnvisible(info4)">
       <a>
-        <img onclick="setMovieID('tt8111088')" src="/images/movies/SpenserConfidential.jpg"
+        <img onclick="setMovieID('tt8111088')" src="./images/movies/SpenserConfidential.jpg"
           alt="Spenser Confidential" />
       </a>
       <div id="info4" class="info">
@@ -137,7 +137,7 @@
   <div id="more-movies1">
     <div class="movie" onmouseover="makeVisible(info5)" onmouseout="makeUnvisible(info5)">
       <a>
-        <img onclick="setMovieID('tt10059518')" src="/images/movies/Unhinged.jpg" alt="Unhinged" />
+        <img onclick="setMovieID('tt10059518')" src="./images/movies/Unhinged.jpg" alt="Unhinged" />
       </a>
       <div id="info5" class="info">
         <div class="info-title">Unhinged</div>
@@ -146,7 +146,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info6)" onmouseout="makeUnvisible(info6)">
       <a>
-        <img onclick="setMovieID('tt7126948')" src="/images/movies/WonderWoman1984.jpg" alt="Wonder Woman 1984" />
+        <img onclick="setMovieID('tt7126948')" src="./images/movies/WonderWoman1984.jpg" alt="Wonder Woman 1984" />
       </a>
       <div id="info6" class="info">
         <div class="info-title">Wonder Woman 1984</div>
@@ -156,7 +156,7 @@
     <br />
     <div class="movie" onmouseover="makeVisible(info7)" onmouseout="makeUnvisible(info7)">
       <a>
-        <img onclick="setMovieID('tt10539608')" src="/images/movies/TheMidnightSky.jpg" alt="The Midnight Sky" />
+        <img onclick="setMovieID('tt10539608')" src="./images/movies/TheMidnightSky.jpg" alt="The Midnight Sky" />
       </a>
       <div id="info7" class="info">
         <div class="info-title">The Midnight Sky</div>
@@ -165,7 +165,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info8)" onmouseout="makeUnvisible(info8)">
       <a>
-        <img onclick="setMovieID('tt7395114')" src="/images/movies/TheDevilAllTheTime.jpg"
+        <img onclick="setMovieID('tt7395114')" src="./images/movies/TheDevilAllTheTime.jpg"
           alt="The Devil All the Time" />
       </a>
       <div id="info8" class="info">
@@ -177,7 +177,7 @@
   <div id="more-movies2">
     <div class="movie" onmouseover="makeVisible(info9)" onmouseout="makeUnvisible(info9)">
       <a>
-        <img onclick="setMovieID('tt10310140')" src="/images/movies/Fatman.jpg" alt="Fatman" />
+        <img onclick="setMovieID('tt10310140')" src="./images/movies/Fatman.jpg" alt="Fatman" />
       </a>
       <div id="info9" class="info">
         <div class="info-title">Fatman</div>
@@ -186,7 +186,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info10)" onmouseout="makeUnvisible(info10)">
       <a>
-        <img onclick="setMovieID('tt7979142')" src="/images/movies/TheNightClerk.jpg" alt="The Night Clerk" />
+        <img onclick="setMovieID('tt7979142')" src="./images/movies/TheNightClerk.jpg" alt="The Night Clerk" />
       </a>
       <div id="info10" class="info">
         <div class="info-title">The Night Clerk</div>
@@ -196,7 +196,7 @@
     <br />
     <div class="movie" onmouseover="makeVisible(info11)" onmouseout="makeUnvisible(info11)">
       <a>
-        <img onclick="setMovieID('tt8936646')" src="/images/movies/Extraction.jpg" alt="Extraction" />
+        <img onclick="setMovieID('tt8936646')" src="./images/movies/Extraction.jpg" alt="Extraction" />
       </a>
       <div id="info11" class="info">
         <div class="info-title">Extraction</div>
@@ -205,7 +205,7 @@
     </div>
     <div class="movie" onmouseover="makeVisible(info12)" onmouseout="makeUnvisible(info12)">
       <a>
-        <img onclick="setMovieID('tt7504726')" src="/images/movies/TheCallOfTheWild.jpg" alt="The Call of the Wild" />
+        <img onclick="setMovieID('tt7504726')" src="./images/movies/TheCallOfTheWild.jpg" alt="The Call of the Wild" />
       </a>
       <div id="info12" class="info">
         <div class="info-title">The Call of the Wild</div>
@@ -266,7 +266,7 @@
       <canvas id="darkModeBtn" width="150" height="150"></canvas>
       <div title="Website nuk ka funksionalitet te plote" id="offline">
         <ul>
-          <li><img id='wifi' width="25px" src="/images/nowifi.png" alt="">
+          <li><img id='wifi' width="25px" src="./images/nowifi.png" alt="">
         </li>
           <li><p id='wifistatus'>Nuk jeni kyqur ne internet</p></li>
           <li><a id='reload' onclick="location.reload()">Reload</a></li>
@@ -276,11 +276,11 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script src="/scripts/theme.js"></script>
+  <script src="./scripts/theme.js"></script>
 
-  <script src="/scripts/slideshow.js"></script>
-  <script src="/scripts/movies-catalog.js"></script>
-  <script src="/scripts/location.js"></script>
+  <script src="./scripts/slideshow.js"></script>
+  <script src="./scripts/movies-catalog.js"></script>
+  <script src="./scripts/location.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
